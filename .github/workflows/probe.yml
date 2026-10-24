@@ -5,8 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.4.0
-      - uses: actions/setup-node@v4.4.0
-        with:
-          node-version: '20'
-      - uses: ./.github/actions/local
-      - run: echo marker-1 && node -v
+      - run: echo marker-1
+  call:
+    uses: ./.github/workflows/reuse.yml
